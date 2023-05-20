@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  web:
+    build: 'D:\DEVOLOPMENT\DJANGO\django_docker_project\2\django_project\'
+    ports:
+      - "8000:8000"
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
