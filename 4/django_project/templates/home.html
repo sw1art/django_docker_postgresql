@@ -1,7 +1,16 @@
 {% extends '_base.html' %}
 
 
-{% block title %}SneakerShop - home{% endblock title %}
+{% block title %}SneakerShop - Главная{% endblock title %}
 {% block content %}
     <h1>Домашняя страница</h1>
+    {% if user.is_authenticated %}
+        <p>Привет {{ user.email }}</p>
+        <p>
+            <a href='{% url 'logout' %}'>Выйти</a>
+        </p>
+    {% else %}
+        <p>Авторизируйся, не позорься</p>
+        <a href='{% url 'login' %}'>Авторизироваться</a>
+    {% endif %}
 {% endblock content %}
