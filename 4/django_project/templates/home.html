@@ -1,17 +1,8 @@
 {% extends '_base.html' %}
-
+{% load static %}
 
 {% block title %}SneakerShop - Главная{% endblock title %}
 {% block content %}
     <h1>Домашняя страница</h1>
-    {% if user.is_authenticated %}
-        <p>Привет {{ user.email }}</p>
-        <p>
-            <a href='{% url 'logout' %}'>Выйти</a>
-        </p>
-    {% else %}
-        <p>Авторизируйся или зарегистрируйся, не позорься</p>
-        <a href='{% url 'login' %}'>Авторизироваться</a>
-        <a href='{% url 'signup' %}'>Зарегестрироваться</a>
-    {% endif %}
+    <img class='card__img' alt='card img' src='{% static 'images\BB550PWC.jpg' %}'>
 {% endblock content %}
