@@ -1,5 +1,5 @@
 .venv
-staticfiles
+django_project/staticfiles
 __pycache__/
 db.sqlite3
-.docker-compose.yml
+django_project/.docker-compose.yml
