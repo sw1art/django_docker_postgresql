@@ -1,0 +1,5 @@
+.venv
+django_project/staticfiles
+__pycache__/
+db.sqlite3
+django_project/.docker-compose.yml
